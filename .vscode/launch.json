@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Worker",
+            "request": "launch",
+            "mainClass": "_04_Thread_Pool.Worker",
+            "projectName": "Level5-Module1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ThreadedReverseGreeting",
             "request": "launch",
             "mainClass": "_03_Threaded_Reverse_Greeting.ThreadedReverseGreeting",
