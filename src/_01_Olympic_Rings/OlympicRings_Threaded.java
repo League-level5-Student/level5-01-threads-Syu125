@@ -26,21 +26,17 @@ public class OlympicRings_Threaded {
 		}
 
 		Thread[] t = new Thread[5];
-		Thread[] turn = new Thread[5];
 
 		for (int i = 0; i < 5; i++) {
 			int num = i;
 			r[i].penDown();
-			t[i] = new Thread(() -> r[num].move(100));
-			turn[i] = new Thread(() -> r[num].turn(20));
+			t[i] = new Thread(() -> r[num].moveTo((int)(100 + 20*Math.cos(Math.PI/16)), (int)(100 + 20*Math.sin(Math.PI/16))));
 		}
 		while (run) {
 			for (int i = 0; i < 5; i++) {
 				int num = i;
 				t[i].start();
-				turn[i].start();
-				t[i] = new Thread(() -> r[num].move(100));
-				turn[i] = new Thread(() -> r[num].turn(20));
+				//t[i] = new Thread(() -> r[num].moveTo((int)(100 + 20*Math.cos(Math.PI/16)), (int)(100 + 20*Math.sin(Math.PI/16))));
 			}
 		}
 

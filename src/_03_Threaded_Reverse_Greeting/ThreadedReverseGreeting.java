@@ -15,12 +15,12 @@ public class ThreadedReverseGreeting {
 	}
 
 	void createThread(int x) {
-		System.out.println("Hello from Thread " + x);
 		Thread t = new Thread(() -> {
 			if (x > 0) {
-				System.out.println("create");
+				System.out.println("Hello from Thread " + x);
 				createThread(x - 1);
 			}
 		});
+		t.start();
 	}
 }

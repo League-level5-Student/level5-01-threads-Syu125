@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadedReverseGreeting",
+            "request": "launch",
+            "mainClass": "_03_Threaded_Reverse_Greeting.ThreadedReverseGreeting",
+            "projectName": "Level5-Module1"
+        }
+    ]
+}
