@@ -8,10 +8,11 @@ public class ThreadPool extends Worker{
     
     public ThreadPool(int totalThreads) {
         threads = new Thread[totalThreads];
+        taskQueue = new ConcurrentLinkedQueue<Task>();
         for (int i = 0; i < threads.length; i++) {
             threads[i] = new Worker(taskQueue);
         }
-        taskQueue = new ConcurrentLinkedQueue<Task>();
+        
     }
 
     public void addTask(Task task) {
